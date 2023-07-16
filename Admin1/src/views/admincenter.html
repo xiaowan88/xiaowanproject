@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Admin1/src/components/bootstrap.css">
+    <link rel="stylesheet" href="/Admin1/public/css/admincenter.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.css">
+    <script src="/Admin1/src/components/bootstrap.bundle.js"></script>
+    <script src="/Admin1/src/components/form-serialize.js"></script>
+    <script src="/Admin1/src/components/axios.min.js"></script>
+    <script src="/Admin1/src/components/jquery.js"></script>
+    <script src="/Admin1/src/components/mock-min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/locale/bootstrap-table-zh-CN.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar bgc">
+        <div class="container-fluid">
+            <h2>购物商品管理后台</h2>
+            <span>欢迎用户</span>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#goods1" aria-expanded="true" aria-controls="collapseOne">
+                                        商城首页
+                                    </button>
+                                </h2>
+                                <div id="goods1" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <a class="nav-link active" aria-current="page"
+                                            href="/Admin1/src/views/admintitle.html">轮播图标题</a>
+                                        <a class="nav-link active" aria-current="page" href="#" id="act">中部内容信息</a>
+                                        <a class="nav-link active" aria-current="page"
+                                            href="/Admin1/src/views/adminbottom.html">添加新闻资讯</a>
+                                        <a class="nav-link active" aria-current="page"
+                                            href="/Admin1/src/views/admingoods.html">添加商品</a>
+                                        <a class="nav-link active" aria-current="page"
+                                            href="/Admin1/src/views/adminpic.html">添加图片</a>
+                                        <a class="nav-link active" aria-current="page"
+                                            href="/Admin1/src/views/adminjlt.html">添加精灵图</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#goods2" aria-expanded="true" aria-controls="collapseOne">
+                                        所有商品
+                                    </button>
+                                </h2>
+                                <div id="goods2" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <a class="nav-link active" aria-current="page"
+                                            href="/Admin1/src/views/adminclass.html">添加商品分类</a>
+                                        <a class="nav-link active" aria-current="page"
+                                            href="/Admin1/src/views/adminplace.html">添加商品产地</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#goods3" aria-expanded="true" aria-controls="collapseOne">
+                                        商品动态
+                                    </button>
+                                </h2>
+                                <div id="goods3" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <a class="nav-link active" aria-current="page"
+                                            href="/Admin1/src/views/adminnews.html">添加动态</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10">
+                <div class="con">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#" style="text-decoration: none;">商城首页</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">中部内容信息</li>
+                        </ol>
+                    </nav>
+                    <!-- 按钮 -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">添加</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">添加</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3 img"></div>
+                                        <div class="mb-3">
+                                            <input type="file" class="form-control" id="form_pic" name="images">
+                                            <label for="recipient-name" class="col-form-label">标题名称:</label>
+                                            <input type="text" class="form-control" id="recipient-name" name="title">
+                                            <label for="brief" class="col-form-label">简介1:</label>
+                                            <input type="text" class="form-control" id="brief" name="brief">
+                                            <label for="brief1" class="col-form-label">简介2:</label>
+                                            <input type="text" class="form-control" id="brief1" name="brief1">
+                                            <label for="recipient-name1" class="col-form-label">商城网址:</label>
+                                            <input type="url" class="form-control" id="recipient-name1" name="http">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-success" id="add">添加</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">修改</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3 updateimg"></div>
+                                        <div class="mb-3">
+                                            <input type="hidden" name="uid" class="uid">
+                                            <input type="file" class="form-control" id="form_pic2" name="images">
+                                            <label for="lbttitle" class="col-form-label">标题名称:</label>
+                                            <input type="text" class="form-control" id="lbttitle" name="title">
+                                            <label for="brief1" class="col-form-label">简介1:</label>
+                                            <input type="text" class="form-control" id="brief11" name="brief">
+                                            <label for="brief2" class="col-form-label">简介2:</label>
+                                            <input type="text" class="form-control" id="brief2" name="brief1">
+                                            <label for="lbthttp" class="col-form-label">商城网址:</label>
+                                            <input type="url" class="form-control" id="lbthttp" name="http">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-success" id="updata">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 表格 -->
+                    <table id="table"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/Admin1/src/api/admincenter.js"></script>
+    <script src="/Admin1/public/js/admincenter.js"></script>
+
+</body>
+
+</html>

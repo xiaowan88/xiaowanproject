@@ -1,0 +1,554 @@
+/* 头部样式 */
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    height: 45px;
+    background-color: #e0e0e0;
+}
+
+.header .wrapper {
+    display: flex;
+    height: 45px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .left {
+    width: 50%;
+    font-size: 12px;
+    display: flex;
+}
+
+.header .left i {
+    margin-top: 2px;
+    width: 12px;
+    height: 12px;
+}
+
+.header .left p {
+    margin-left: 5px;
+}
+
+.header .left p:nth-of-type(2) {
+    margin-left: 8%;
+}
+
+.header .left .icon-shijian {
+    font-size: 12px;
+}
+
+
+
+.header .right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .right i {
+    width: 20px;
+    height: 20px;
+    margin-left: 3%;
+}
+
+.header .right .icon-sousuo1,
+.header .right .icon-weidenglu,
+.header .right .icon-gouwuchekong {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* 标题头 */
+.header_title .wrapper {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_title img {
+    width: 156px;
+    height: 22px;
+}
+
+.header_title .right {
+    width: 300px;
+    height: 30px;
+    border: 2px solid #1365f2;
+    display: flex;
+}
+
+.header_title .right input {
+    flex: 1;
+    padding-top: 1px;
+}
+
+.header_title .right input::placeholder {
+    padding-left: 10px;
+    color: #d4c2bc;
+    font-size: 14px;
+}
+
+.header_title .right .right {
+    width: 45px;
+    height: 28px;
+    background-color: #1365f2;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.header_title .right .right i {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.header_title .right .right .icon-sousuo {
+    font-size: 20px;
+    color: white;
+}
+
+/* 导航栏 */
+.nav {
+    height: 40px;
+    background-color: black;
+
+}
+
+.nav .nav_ul {
+    display: flex;
+    height: 40px;
+    align-items: end;
+}
+
+.nav_ul li {
+    width: 112px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+
+.nav .nav_ul a {
+    color: white;
+    font-size: 13px;
+    display: block;
+    width: 112px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.active {
+    background-color: #3c7ff2;
+}
+
+.nav .nav_ul a span {
+    margin-left: 25%;
+    line-height: 35px;
+}
+
+.nav .nav_ul a:hover {
+    background-color: #3c7ff2;
+}
+
+
+/* 商品筛选导航栏 */
+.filter {
+    margin-top: 40px;
+}
+
+.filter table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+.filter table thead tr {
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    height: 39px;
+}
+
+
+
+.tdspan span,
+.placess span {
+    margin-left: 10px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+
+
+.th1 {
+    width: 100px;
+    text-align: left;
+    font-weight: 400;
+    padding-left: 10px;
+    font-size: 13px;
+    color: #666;
+}
+
+.filter table .search {
+    float: right;
+    display: flex;
+    width: 156px;
+    height: 26px;
+    border: 1px solid #cccccc;
+    align-items: center;
+}
+
+.filter table .search input {
+    width: 135px;
+    background-color: transparent;
+}
+
+.filter table .search input::placeholder {
+    padding-left: 10px;
+    font-size: 12px;
+    color: #aaaaaa;
+}
+
+.icon-sousuo {
+    color: #1365f2;
+}
+
+.filter table tbody tr {
+    border: 1px solid #e2e2e2;
+}
+
+td {
+    color: #666;
+    font-size: 12px;
+}
+
+.filter table .active1 {
+    width: 80px;
+    height: 35px;
+    padding-left: 10px;
+    color: #919191;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #ededed;
+}
+
+.activespan {
+    color: #3c7ff2;
+}
+
+
+/* 商品内容 */
+.product {
+    margin-top: 2%;
+}
+
+.pro_title {
+    display: flex;
+    border-bottom: 1px solid #cecece;
+    margin-bottom: 3%;
+}
+
+.pro_title h3 {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 2px solid #1365f2;
+}
+
+.pro_title p {
+    height: 45px;
+    color: #bebebe;
+    line-height: 45px;
+    margin-left: 5px;
+}
+
+.product .pro_content .pro_content_ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product .pro_content li {
+    width: 282px;
+    height: 330px;
+    overflow: hidden;
+    transition: all .5s;
+    margin-bottom: 2.5%;
+    margin-right: 2%;
+}
+
+.product .pro_content li:nth-of-type(4n) {
+    margin-right: 0;
+}
+
+.product .pro_content li .pic {
+    margin-top: 8%;
+    width: 280px;
+    height: 205px;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.product .pro_content li img {
+    width: 280px;
+    height: 205px;
+    transition: all .5s;
+}
+
+.product .pro_content li p {
+    margin-top: 5%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #a2a2a2;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.product .pro_content li p b {
+    transform: translateX(-280px);
+    display: block;
+    border-bottom: 1.5px solid #eee;
+    transition: all 1s;
+}
+
+.product .pro_content li .bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product .pro_content li .bottom i {
+    margin-top: 4%;
+    margin-right: 8%;
+    cursor: pointer;
+}
+
+.product .pro_content li span {
+    display: block;
+    color: red;
+    margin-top: 3%;
+    margin-right: 28%;
+}
+
+
+
+
+
+/* 底部雪碧图 */
+.foot {
+    height: 118px;
+    background-color: #393939;
+}
+
+.foot .wrapper {
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 118px;
+}
+
+.foot .wrapper img {
+    width: 81px;
+    height: 47px;
+}
+
+/* 最底部文字和图片上面部分 */
+.foot1 {
+    background-color: #191919;
+}
+
+.foot1 .foot1_top {
+    height: 145px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.foot1 .foot1_top_pic {
+    display: flex;
+    width: 287px;
+    margin-right: 3%;
+}
+
+.foot1 .foot1_top_pic img {
+    width: 49px;
+    height: 46px;
+    margin-right: 7%;
+}
+
+.foot1 .foot1_top_pic h4 {
+    color: #bcbcbc;
+}
+
+.foot1 .foot1_top_pic p {
+    color: #898989;
+    font-size: 13px;
+}
+
+
+/* 最底部文字和图片中间部分 */
+.foot1_center {
+    margin-top: 4%;
+    display: flex;
+    padding-bottom: 3%;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.foot1_center .foot1_center_font {
+    width: 287px;
+}
+
+dt {
+    color: #d3d3d3;
+    margin-bottom: 13%;
+    font-weight: 700;
+}
+
+dd {
+    font-size: 12px;
+    color: #808080;
+    margin-bottom: 4.8%;
+}
+
+.dls {
+    margin-top: 35%;
+}
+
+.dls1 {
+    margin-top: 45%;
+}
+
+.foot1_center .foot1_center_font .pay {
+    color: white;
+    margin-top: 45%;
+}
+
+.foot1_center .foot1_center_font .pay h4 {
+    color: #d3d3d3;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.foot1_center .foot1_center_font .pay_pic img:nth-of-type(1) {
+    width: 49px;
+    height: 32px;
+}
+
+.foot1_center .foot1_center_font .pay_pic img:nth-of-type(2),
+.foot1_center .foot1_center_font .pay_pic img:nth-of-type(3) {
+    width: 34px;
+    height: 34px;
+}
+
+.foot1_center_font_bottom {
+    margin-top: 47%;
+}
+
+.foot1_center_font_bottom .pic1 {
+    width: 120px;
+    height: 17px;
+    margin-bottom: 8%;
+}
+
+.foot1_center_font_bottom p {
+    margin-top: 2%;
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* 底部文字和图片下面 */
+.xbt {
+    margin-top: 2%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.foot1_bottom span {
+    margin-right: 1.5%;
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.foot1_bottom .xbt .sp1 {
+    background-image: url(../../public/images/雪碧图.png);
+    background-position: -16px 16px;
+}
+
+.foot1_bottom .xbt .sp2 {
+    background-image: url(../../public/images/雪碧图.png);
+    background-position: 0px 16px;
+}
+
+.foot1_bottom .xbt .sp3 {
+    background-image: url(../../public/images/雪碧图.png);
+    background-position: -64px 16px;
+}
+
+.foot1_bottom .xbt .sp4 {
+    background-image: url(../../public/images/雪碧图.png);
+    background-position: -127px 16px;
+}
+
+.foot1_bottom .xbt .sp5 {
+    background-image: url(../../public/images/雪碧图.png);
+    background-position: -96px 16px;
+}
+
+.foot1_bottom .xbt .sp6 {
+    background-image: url(../../public/images/雪碧图.png);
+    background-position: -224px 16px;
+}
+
+.foot1_bottom_font {
+    margin-top: 5px;
+    text-align: center;
+    color: white;
+    color: #a9a9a9;
+    font-size: 13px;
+    padding-bottom: 1.5%;
+}
+
+
+/* 电梯导航 */
+.enav {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    z-index: 100;
+}
+
+.enav p {
+    width: 54px;
+    height: 54px;
+    background-color: #000;
+}
+
+.ep1 {
+    background-image: url(../../public/images/5.png);
+    background-position: -37px 10px;
+    background-size: 80px;
+}
+
+.ep2 {
+    background-image: url(../../public/images/5.png);
+    background-position: -38px -37px;
+    background-size: 80px;
+}
+
+.enav .ep3 {
+    background-image: url(../../public/images/5.png);
+    background-position: -37px -291px;
+    background-size: 80px;
+    background-color: #1365f2;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}

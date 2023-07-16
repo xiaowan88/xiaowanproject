@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #daeff8;
+        }
+
+        .body {
+            width: 620px;
+            height: 400px;
+            /* margin: 0 50%; */
+            /* transform: translate(-50%, 50%); */
+            color: #92b2d5;
+            text-align: center;
+            background-color: #f2fafe;
+        }
+
+        .body .left {
+            padding-top: 130px;
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+        .body .right {
+            padding-top: 130px;
+            width: 50%;
+            height: 100%;
+            float: right;
+        }
+
+        .register,
+        .login {
+            margin-top: 50px;
+            width: 100px;
+            height: 40px;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .header {
+            padding-top: 100px;
+            position: absolute;
+            top: -10%;
+            /* left 左边是31% 右边是51% */
+            left: 2%;
+            width: 300px;
+            height: 500px;
+            background-color: #abd8ec;
+            text-align: center;
+            color: white;
+            transition: all 1s;
+        }
+
+        .form2 {
+            display: none;
+        }
+
+        input:nth-of-type(1) {
+            margin-top: 20px;
+        }
+
+        input {
+            margin-bottom: 20px;
+            border: 0;
+            border-bottom: 1px solid white;
+            outline: none;
+            background-color: transparent;
+            width: 220px;
+        }
+
+        input::placeholder {
+            padding-left: 10px;
+            color: white;
+        }
+
+        .rt {
+            width: 200px;
+            height: 30px;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .lg {
+            width: 200px;
+            height: 30px;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        p {
+            color: red;
+        }
+
+        .box {
+            width: 620px;
+            height: 400px;
+            margin: -2% 50%;
+            transform: translate(-50%, 50%);
+        }
+
+        #checkbox {
+            margin-left: -70px;
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="body">
+            <div class="left">
+                <h2>购物商城管理系统</h2>
+                <button class="register">去注册</button>
+            </div>
+            <div class="right">
+                <h2>购物商城管理系统</h2>
+                <button class="login">去登录</button>
+            </div>
+        </div>
+        <div class="header">
+            <form autocomplete="off" class="form1">
+                <h1>REGISTER</h1>
+                <input type="text" class="username" name="username" placeholder="请输入账号">
+                <p class="user1"></p>
+                <input type="password" class="password" name="password" placeholder="密码">
+                <p class="pwd2"></p>
+                <input type="password" class="conf" name="conf" placeholder="确认密码">
+                <p class="pwd3"></p>
+                <input type="text" class="text" name="text" placeholder="请输入联系电话">
+                <p class="text4"></p>
+                <button class="rt">注册</button>
+            </form>
+            <form autocomplete="off" class="form2">
+                <h1>LOGIN</h1>
+                <input type="text" class="username1" name="username1" placeholder="用户名">
+                <p class="user"></p>
+                <input type="password" class="password1" name="password1" placeholder="密码">
+                <p class="pwd"></p>
+                <input type="checkbox" name="checkbox" id="checkbox">是否保持登录状态<br>
+                <button class="lg">登录</button>
+            </form>
+        </div>
+    </div>
+    <script src="../components/md5.js"></script>
+    <script src="../../public/js/register.js"></script>
+    <script src="../../public/js/login.js"></script>
+</body>
+
+</html>

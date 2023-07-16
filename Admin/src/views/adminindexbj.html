@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../public/css/adminindex.css">
+    <link rel="stylesheet" href="../../public/iconfont/iconfont.css">
+    <script src="/Admin/src/components/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>购物商品管理后台</h1>
+        <h4>欢迎登录</h4>
+    </div>
+    <div class="content">
+        <div class="left">
+            <ul>
+                <li>
+                    <div class="dd">
+                        <i class="iconfont icon-shangpin"></i><span>商城首页</span>
+                    </div>
+                    <div class="one">
+                        <a href="/Admin/src/views/adminindex.html">轮播图标题</a>
+                        <a href="../../src/views/adminindexcenter.html">中部内容信息</a>
+                        <a href="../../src/views/adminindexbottom.html">透明背景信息</a>
+                        <a href="../views/adminindexgoods.html">添加商品</a>
+                        <a href="../views/adminindexbj.html">添加图片</a>
+                        <a href="../views/adminindexjlt.html">添加精灵图</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="dd">
+                        <i class="iconfont icon-bianjiwenzhang_huaban"></i><span>所有商品</span>
+                    </div>
+                    <div class="one">
+                        <a href="../../src/views/allgoodsclass.html">所有分类</a>
+                        <a href="../../src/views/allgoodsplace.html">产地</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="dd">
+                        <i class="iconfont icon-shezhi"></i><span>商品动态</span>
+                    </div>
+                    <div class="one">
+                        <a href="../../src/views/goodsnews.html">添加动态</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="dd">
+                        <i class="iconfont icon-tuichu"></i><span>退出系统</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h4 class="h4">商城首页/首页信息</h4>
+            <div class="bottom">
+                <button class="btn1"><i class="iconfont icon-zengjia"></i>新增</button>
+                <button class="btn4"><i class="iconfont icon-update"></i>刷新</button>
+                <div class="right_one">
+                    <input type="text" name="search" id="search" placeholder="请输入商品名称">
+                    <button class="btn5"><i class="iconfont icon-31sousuo"></i>查询</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>商城网址</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="mod">
+        <div class="lm">
+            <div class="top">
+                <h3 class="hh">新增窗口</h3><span class="shanchu">X</span>
+            </div>
+            <div class="bot">
+                <form autocomplete="off" style="margin-left: 10%;">
+                    <label for="xh" class="pic">点击添加图片</label>
+                    <input type="file" id="xh" name="xh">
+                    <div class="bu" style="margin-left: 12%;">
+                        <input class="btn6" type="button" value="取消">
+                        <button class="btn7">新增</button>
+                    </div>
+                    <div class="pp dd"></div>
+                </form>
+                <form autocomplete="off" style="display: none;margin-left: 10%;">
+                    <input type="hidden" name="uid" id="uid">
+                    <label for="xh1" class="pic">点击添加图片</label>
+                    <input type="file" id="xh1" name="xh1">
+                    <div class="bu" style="margin-left: 12%;">
+                        <input class="btn6" type="button" value="取消">
+                        <button class="btn8" type="button">编辑</button>
+                    </div>
+                    <div class="pp1 dd"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../components/jquery.js"></script>
+    <script src="../components/mock-min.js"></script>
+    <script src="../../src/api/adminindexbj.js"></script>
+    <script src="../../public/js/adminindexbj.js"></script>
+</body>
+
+</html>

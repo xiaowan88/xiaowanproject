@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/Web/src/components/bootstrap.css">
+  <link rel="stylesheet" href="/Web/public/css/news1.css">
+  <link rel="stylesheet" href="/Web/public/iconfont/iconfont.css">
+  <script src="/Web/src/components/axios.min.js"></script>
+  <script src="/Web/src/components/bootstrap.bundle.js"></script>
+  <script src="/Web/src/components/form-serialize.js"></script>
+  <script src="/Web/src/components/jquery.js"></script>
+  <script src="/Web/src/components/mock-min.js"></script>
+</head>
+
+<body>
+  <div class="bj">
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand iconfont icon-shijian black" href="#"></a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item fs">
+              <a class="nav-link black" href="#">在线时间 08:30~21:30</a>
+            </li>
+            <li class="nav-item fs">
+              <a class="nav-link black" href="#">欢迎访问户外运动专卖商城！</a>
+            </li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link iconfont icon-sousuo1" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link iconfont icon-weidenglu" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link iconfont icon-gouwuchekong" href="#"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 搜索 -->
+  <div class="container">
+    <div class="row image">
+      <div class="col-sm-8 col-md-6 col-lg-9 col-xl-8 p-3 text-white">
+        <img src="/Web/public/images/30.webp">
+      </div>
+      <div class="col-sm-4 col-md-6 col-lg-3 col-xl-4 p-3  text-white">
+        <div class="right">
+          <input type="text" id="search" placeholder="搜索商品关键字">
+          <div class="right">
+            <i class="iconfont icon-sousuo"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 导航 -->
+  <div class="avbj">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-xl-1 ">
+          <a href="../views/index.html"><span>商城首页</span></a>
+        </div>
+        <div class="col-sm-12 col-md-4 col-xl-1 ">
+          <a href="../views/allgoods.html"><span>所有商品</span></a>
+        </div>
+        <div class="col-sm-12 col-md-4 col-xl-9">
+          <a href="javascript:;" class="active"><span>商城动态</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 店铺动态 -->
+  <div class="container">
+    <div class="product1">
+      <div class="wrapper">
+        <div class="pro_title">
+          <h3>店铺动态</h3>
+          <p>News</p>
+        </div>
+        <div class="row yx">
+          <div class="col-xl-2 col-md-2">
+            <img src="../../public/images/21.webp" style="cursor: pointer;" class="img">
+          </div>
+          <div class="col-xl-10 col-md-12">
+            <div class="pro1_font data-font1">
+              <h4>探路者&新浪体育超级雪滑雪季暨明星邀请赛今冬启动</h4>
+              <span>发布日期：</span><span>2017-05-23</span>
+              <p><i>老板：</i>你的白色底太暗了，再亮一点</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="bjys">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <div class="foot1_top_pic">
+            <img src="../../public/images/10.webp">
+            <div class="foot1_top_pic_font">
+              <h4>满1000元全国包邮</h4>
+              <p>全场订单满1000元全国包邮</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <div class="foot1_top_pic">
+            <img src="../../public/images/9.webp">
+            <div class="foot1_top_pic_font">
+              <h4>下单送精美礼品</h4>
+              <p>本店购买任意商品赠送精美礼品</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <div class="foot1_top_pic">
+            <img src="../../public/images/8.webp">
+            <div class="foot1_top_pic_font">
+              <h4>满1000元全国包邮</h4>
+              <p>全场订单满1000元全国包邮</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <div class="foot1_top_pic">
+            <img src="../../public/images/7.webp">
+            <div class="foot1_top_pic_font">
+              <h4>店铺优惠劵</h4>
+              <p>每日整点可领取限量优惠劵</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <dl>
+            <dt>关于产品</dt>
+            <dd>本店商品非质量问题谢绝退换，如</dd>
+            <dd>有质量问题，本店承担运费调换</dd>
+          </dl>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <dl>
+            <dt>售后服务</dt>
+            <dd>消費者保障服务</dd>
+            <dd>七天无理由退款</dd>
+            <dd>假一赔三</dd>
+          </dl>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <dl>
+            <dt>退换货政策</dt>
+            <dd>本店商品非质量问题谢绝退换，如</dd>
+            <dd>有质量问题，本店承担运费调换</dd>
+          </dl>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <dl>
+            <dt>售后服务</dt>
+            <dd>本店商品非质量问题谢绝退换，如</dd>
+            <dd>有质量问题，本店承担运费调换</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <div class="pay">
+            <h4>支付方式</h4>
+            <div class="pay_pic">
+              <img src="../../public/images/4.png">
+              <img src="../../public/images/3.png">
+              <img src="../../public/images/1.png">
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <dl class="dls">
+            <dt>关于商城</dt>
+            <dd>本店商品非质量问题谢绝退换，如</dd>
+            <dd>有质量问题，本店承担运费调换</dd>
+          </dl>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <dl class="dls1">
+            <dt>关于产品</dt>
+            <dd>本店商品非质量问题谢绝退换，如</dd>
+            <dd>有质量问题，本店承担运费调换</dd>
+          </dl>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+          <div class="foot1_center_font_bottom">
+            <img src="../../public/images/6.webp" class="pic1"><br>
+            <img src="../../public/images/5.webp">
+            <p>搜索微信号：HUAYU</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/Web/src/api/newsapi.js"></script>
+  <script src="/Web/public/js/news.js"></script>
+</body>
+
+</html>

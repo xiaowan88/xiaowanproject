@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../public/css/adminindex.css">
+    <link rel="stylesheet" href="../../public/iconfont/iconfont.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>购物商品管理后台</h1>
+        <h4>欢迎登录</h4>
+    </div>
+    <div class="content">
+        <div class="left">
+            <ul>
+                <li>
+                    <div class="dd">
+                        <i class="iconfont icon-shangpin"></i><span>商城首页</span>
+                    </div>
+                    <div class="one">
+                        <a href="../../src/views/adminindex.html">banner图信息</a>
+                        <a href="../../src/views/adminindexcenter.html">中部内容信息</a>
+                        <a href="../../src/views/adminindexbottom.html">透明背景信息</a>
+                        <a href="../../src/views/adminindexgoods.html">添加商品</a>
+                        <a href="../views/adminindexbj.html">添加图片</a>
+                        <a href="../views/adminindexxbt.html">添加精灵图</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="dd">
+                        <i class="iconfont icon-bianjiwenzhang_huaban"></i><span>所有商品</span>
+                    </div>
+                    <div class="one">
+                        <a href="../../src/views/allgoodsclass.html">所有分类</a>
+                        <a href="../../src/views/allgoodsplace.html">产地</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="dd">
+                        <i class="iconfont icon-shezhi"></i><span>商品动态</span>
+                    </div>
+                    <div class="one">
+                        <a href="javascript:;">添加动态</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="dd">
+                        <i class="iconfont icon-tuichu"></i><span>退出系统</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h4 class="h4">商品动态/添加动态</h4>
+            <div class="bottom">
+                <button class="btn1"><i class="iconfont icon-zengjia"></i>新增</button>
+                <button class="btn3"><i class="iconfont icon-shanchu"></i>删除</button>
+                <div class="right_one">
+                    <input type="text" name="search" id="search" placeholder="请输入商品名称">
+                    <button class="btn5"><i class="iconfont icon-31sousuo"></i>查询</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" class="chall"></th>
+                            <th>图片</th>
+                            <th>标题</th>
+                            <th>标题分类</th>
+                            <th>人物类型</th>
+                            <th>发布内容</th>
+                            <th>发布时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="mod">
+        <div class="lm">
+            <div class="top">
+                <h3 class="hh">发布窗口</h3><span class="shanchu">X</span>
+            </div>
+            <div class="bot">
+                <form autocomplete="off" style="margin-left: 10%;">
+                    <label for="xh" class="pic">点击添加图片</label>
+                    <input type="file" id="xh" name="xh">
+                    <label for="username">标&emsp;&emsp;题</label>
+                    <input type="text" name="username" id="username"><br>
+                    <!-- <label for="con">标题分类</label>
+                    <input type="text" name="con" id="con"><br> -->
+                    <label for="content">标题内容</label>
+                    <input type="text" name="content" id="content"><br>
+                    动态分类
+                    <select id="clp">
+                        <option value="客户动态">客户动态</option>
+                        <option value="商家动态">商家动态</option>
+                        <option value="设计师动态">设计师动态</option>
+                    </select><br>
+                    人物类型
+                    <select id="classp">
+                        <option value="商家">商家</option>
+                        <option value="客户">客户</option>
+                        <option value="设计师">设计师</option>
+                    </select>
+                    <div class="bu">
+                        <input class="btn6" type="button" value="取消">
+                        <button class="btn7">发布</button>
+                    </div>
+                    <div class="pp"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../components/jquery.js"></script>
+    <script src="../components/mock-min.js"></script>
+    <script src="../../src/api/goodsnews.js"></script>
+    <script src="../../public/js/goodsnews.js"></script>
+</body>
+
+</html>
